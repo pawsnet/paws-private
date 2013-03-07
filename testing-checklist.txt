@@ -1,13 +1,18 @@
 PAWS Router Testing Checklist
 
-Firewall Rules & VPN Connection
+WLAN Testings
 - plug in router and connect to PAWS Wifi
 - use browser to visit some sites (HTTP only) and check that you are re-directed to the PAWS router webpage
-- check that other protocols also don't work such as ftp or ssh
+- check that other protocols also don't work such as ftp or ssh but you should be able to ping
 - connect to the paws VPN & check that you know get a connection, run speedtest
+- try to shh into 192.168.50.1
+
+LAN Testing
+- disconnect from the Wifi and connect via ethernet
+- check that you connect get a internet connect with or without the VPN
+- ssh into 192.168.142.1 and use the secure password
 
 Commuincations with server 
-
 - run ./bdm list and check that the router is green and has recently pinged the server
 - run ./bdm console <mac-address> and check that a ssh connection is successfully created, it should not ask for a password
 - run ./bdm config <mac-address> wifi-disable and check that wifi is disabled, repeat for wifi enable
